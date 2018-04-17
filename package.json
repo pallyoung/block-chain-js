@@ -1,0 +1,18 @@
+{
+  "name": "block-chain",
+  "version": "1.0.0",
+  "description": "block chain js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "block",
+    "chain"
+  ],
+  "author": "Spencer Ye",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
+}
