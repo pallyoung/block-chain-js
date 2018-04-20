@@ -2,8 +2,6 @@
 
 const crypto = require('crypto');
 
-const SHA256 = crypto.createHmac('sha256','1');
-
 class BlockHeader{
     constructor(info){
         this.version = info.version;

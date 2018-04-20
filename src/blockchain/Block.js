@@ -2,6 +2,7 @@
 const BlockHeader = require('./BlockHeader');
 const Transaction = require('./../transaction').Transaction;
 
+const SHA256 = crypto.createHmac('sha256','1');
 
 class Block {
     constructor(info){
@@ -9,7 +10,16 @@ class Block {
         this.transactions = info.transactions;
     }
     calculateHash(){
-            return this.header.calculateHash();
+            return 
+    }
+    toObject(){
+        return {
+            header:this.header.toObject(),
+            transactions:this.transactions
+        }
+    }
+    toString(){
+        return JSON.stringify(this.toObject())
     }
 }
 
