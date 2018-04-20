@@ -242,3 +242,9 @@ function reverse(param) {
     }
     return ret;
 }
+
+module.exports = {
+    isBuffer,
+    createWriter,
+    createReader
+}
