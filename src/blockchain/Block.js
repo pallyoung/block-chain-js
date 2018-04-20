@@ -1,10 +1,15 @@
 'use strict'
-var BlockHeader = require('./BlockHeader');
-var Transaction = require('./../transaction').Transaction;
+const BlockHeader = require('./BlockHeader');
+const Transaction = require('./../transaction').Transaction;
+
+
 class Block {
-    constructor(){
-        this.header = new BlockHeader();
-        this.transactions = new Transaction();
+    constructor(info){
+        this.header = new BlockHeader(info.header);
+        this.transactions = info.transactions;
+    }
+    calculateHash(){
+            return this.header.calculateHash();
     }
 }
 

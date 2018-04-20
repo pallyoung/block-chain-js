@@ -11,8 +11,5 @@
     "chain"
   ],
   "author": "Spencer Ye",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "crypto": "^1.0.1"
-  }
+  "license": "Apache-2.0"
 }

@@ -1,7 +1,14 @@
 'use strict'
 class Transaction{
-    constructor(){
-
+    constructor(info){
+        let {
+            fromAddress,
+            toAddress,
+            amount
+        } = info;
+        this.fromAddress = fromAddress;
+        this.toAddress = toAddress;
+        this.amount = amount;
     }
 }
 
