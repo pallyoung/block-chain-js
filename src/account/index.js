@@ -1,8 +1,4 @@
 'use strict'
-class Account {
-    constructor(){
 
-    }
-}
 
-module.exports = Account;
+module.exports = require('./Account');

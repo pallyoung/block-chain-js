@@ -8,9 +8,6 @@ class Block {
         this.header = new BlockHeader(info.header);
         this.transactions = info.transactions;
     }
-    calculateHash(){
-            return 
-    }
     toObject(){
         return {
             header:this.header.toObject(),

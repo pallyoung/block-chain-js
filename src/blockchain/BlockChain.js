@@ -28,12 +28,14 @@ class BlockChain {
         this.pendingTransactions.push(transaction);
     }
     isChainValid() {
-        for (let i = 1; i < this.chain.length; i++) {
-            const currentBlock = this.chain[i];
-            const previousBlock = this.chain[i - 1];
-            if (currentBlock.previousHash !== previousBlock.hash) {
+        let block = this.lastBlock;
+        let pre;
+        while(block.pre){
+            pre = block.pre;
+            if(previousBlock.header.hash!==block.header.prevHash){
                 return false;
             }
+            block = pre;
         }
         return true;
     }

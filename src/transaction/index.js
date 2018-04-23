@@ -1,4 +1,4 @@
-var Transaction =require('./Transaction');
+var Transaction = require('./Transaction');
 
 
 module.exports = {
