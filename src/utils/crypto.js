@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-
 const Hash = {}
 
 Hash.sha1 = function(buf) {
@@ -69,6 +68,22 @@ Hash.sha512hmac = function(data, key) {
   return Hash.hmac(Hash.sha512, data, key);
 };
 
+function generateKeys(privateKey){
+    const ecdh = crypto.createECDH('secp256k1');
+    if(privateKey){
+        ecdh.setPrivateKey(privateKey,'hex')
+    }else{
+        ecdh.generateKeys();
+    }
+    return {
+        privateKey:ecdh.getPrivateKey('hex'),
+        publicKey:ecdh.getPublicKey('hex')
+    }
+}
+function sign(secret){
+
+}
 module.exports = {
-    Hash
+    Hash,
+    generateKeys
 }

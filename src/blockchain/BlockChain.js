@@ -27,6 +27,9 @@ class BlockChain {
         // 推入待处理交易数组
         this.pendingTransactions.push(transaction);
     }
+    getBlock(hash){
+        
+    }
     isChainValid() {
         let block = this.lastBlock;
         let pre;
