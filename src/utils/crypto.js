@@ -80,10 +80,16 @@ function generateKeys(privateKey){
         publicKey:ecdh.getPublicKey('hex')
     }
 }
+function hex2base64(v){
+    const ecdh = crypto.createECDH('secp256k1');
+    ecdh.setPrivateKey(v,'hex')
+    return ecdh.getPrivateKey('base64');
+}
 function sign(secret){
 
 }
 module.exports = {
     Hash,
-    generateKeys
+    generateKeys,
+    hex2base64
 }

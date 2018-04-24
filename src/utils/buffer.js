@@ -23,7 +23,10 @@ class BufferWriter {
         }
         return this;
     };
-
+    writeString(str){
+        this.write(new Buffer(str));
+        return this;
+    }
     writeReverse(buf) {
         if (isBuffer(buf)) {
             this.buffers.push(reverse(buf));
