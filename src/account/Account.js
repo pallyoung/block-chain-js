@@ -32,8 +32,6 @@ class Account{
         let publicKey = keys.publicKey;
         let privateKey = keys.privateKey;
         let address = Address.fromPublicKey(publicKey);
-
-        console.log(address)
         return {
             publicKey,
             privateKey,
