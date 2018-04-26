@@ -246,8 +246,12 @@ function reverse(param) {
     return ret;
 }
 
+function from(){
+    return Buffer.from();
+}
 module.exports = {
     isBuffer,
     createWriter,
-    createReader
+    createReader,
+    from
 }

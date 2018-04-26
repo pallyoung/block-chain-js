@@ -2,6 +2,8 @@
 const crypto = require('./../utils/crypto'); 
 const Address = require('./Address');
 
+const CODE = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+
 
 function randomInt(){
     return Math.floor(Math.random()*15)+1;
